@@ -1,0 +1,132 @@
+* {
+	box-sizing: border-box;
+	border: black 1px solid;
+}
+
+/* enlever les propriétés de base pour balise a */
+body a {
+  text-decoration: none;
+  color: inherit;
+  /* hover control des liens main et footer */
+  transition: 0.3s;
+}
+main a:hover, footer li a:hover {
+  color: #ba3800;
+  font-size: 1.05rem;
+}
+/* fin du hover control des liens main et footer */
+
+
+/* sticky footer */
+/* html,
+body {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+
+.site_container {
+	flex: 1;
+} */
+/* fin sticky footer */
+
+figure {
+	margin: 0%;
+	padding: 0%;
+}
+
+img {
+	width: 100%;
+	height: auto;
+}
+section img {
+	border-radius: 25px;
+}
+
+ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+:required {
+	border-color: #ff1919;
+}
+
+.container {
+	width: 80%;
+	margin-left: 20%;
+	height: 100vh;
+}
+
+.hero {
+	width: 100%;
+	background-image: url("../images/clean.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	padding: 10% 5%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	color: white;
+}
+.hero .hero_texte {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+}
+
+.hero figure,
+.hero figure img {
+	border-radius: 50%;
+}
+
+.hero figure {
+	width: 33%;
+	margin: auto;
+	padding: 10% 5%;
+}
+.hero .overlay {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: -1;
+}
+
+.hero p:nth-child(2) {
+	font-size: 24px;
+	font-weight: 900;
+	margin: 0.6rem;
+}
+
+.hero p:nth-child(3) {
+	font-size: 24px;
+	font-weight: 900;
+	color: #c68b59;
+	margin: 0.6rem;
+}
+
+.hero p:nth-child(4) {
+	font-size: 18px;
+	font-weight: 500;
+	margin: 0.6rem;
+}
+
+@media screen and (min-width: 768px) {
+	.hero p:nth-child(2) {
+		font-size: 48px;
+	}
+
+	.hero p:nth-child(3) {
+		font-size: 48px;
+	}
+
+	.hero p:nth-child(4) {
+		font-size: 25px;
+	}
+}
