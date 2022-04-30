@@ -1,12 +1,12 @@
-<section class="hero">
+
     <div class="hero_texte">
-        <figure>
+        <!-- <figure>
             <img src="images\portfoliopic.png" alt="profile picture" />
-        </figure>
+        </figure> -->
+
         <p>Justine</p>
         <p>TAVARES VAZ</p>
         <p>Développement Web et Web Mobile</p>
     </div>
 
-    <div class="overlay"></div>
-</section>
+    <!-- <div class="overlay"></div> -->

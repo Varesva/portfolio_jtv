@@ -1,5 +1,31 @@
 footer {
-    max-height: 30%;
-    background-color: #C1B9FF;
-    padding: 3rem 1rem;
+	height: auto;
+	background-color: #c1b9ff;
+	padding: 0.75rem;
+}
+footer li.col {
+    padding-bottom: 0.75rem ;
+}
+
+/* taille et hover des liens footer */
+footer li a:hover {
+	color: #ba3800;
+	font-size: 1.05rem;
+}
+/* chevron up */
+footer a i {
+	width: 2.5rem;
+	height: auto;
+    margin-bottom: 1.5rem;
+}
+footer a:hover {
+	color: #ba3800;
+}
+
+/* responsive ordinateur laptop format */
+@media screen and (min-width: 1024px) {
+	/* masquer le menu de footer */
+	footer ul.row {
+		display: none;
+	}
 }

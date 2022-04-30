@@ -2,7 +2,7 @@ html {
 	font-size: 100%;
 } /*16px*/
 
-body, body main {
+body, main {
 	background: white;
 	font-family: "Montserrat", sans-serif;
 	font-weight: 500;
@@ -12,6 +12,10 @@ body, body main {
 
 p {
 	margin-bottom: 1rem;
+}
+/* les liens de liste en gras */
+li a {
+	font-weight: 500;
 }
 
 body h1,
@@ -52,5 +56,7 @@ h5 {
 
 small,
 .text_small {
-	font-size: 0.75rem;
+	font-size: 0.85rem;
+	color: #7F7C82;
+	font-style: italic;
 }

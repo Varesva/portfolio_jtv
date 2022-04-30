@@ -1,111 +1,248 @@
-/* responsive format medium */
+/* responsive format petit mobile (360x640: mobile-first */
 header {
-    width: 100%;
-    max-height: 20%;
-	padding: 1.5rem;
-	background-color: #6552ff;
+	background: rgb(5, 32, 175);
+	background: linear-gradient(
+		45deg,
+		rgba(5, 32, 175, 1) 0%,
+		rgba(161, 95, 255, 1) 64%,
+		rgba(101, 82, 255, 1) 100%
+	);
 	color: white;
+	padding: 0.75rem 0;
 }
 
 .header_container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	padding-left: 0.75rem;
+	padding-right: 0.75rem;
 }
+
 /* logo */
 header figure {
-    width: 30%;
-    margin: 20px 0;
-    padding: 0 ;
-}
-figure img {
-    width: 100%;
-    border-radius: 50%;
-    height: auto;
-}
-
-
-nav {
-    width: 100%;
-}
-.nav_header_site .menu_header_site {
+	width: 18%;
+	margin: 0; /* supprimer le margin bottom de la balise fugure du scss */
 	display: flex;
-	justify-content: space-between;
-	/* border-bottom: white dotted 2px; */
-	padding: 15px;
+	align-items: center;
 }
 
-.nav-item {
-	font-size: 1.3rem;
+/* masquer la nav du grand format */
+.header_nav,
+.header_icon_socials:first-of-type {
+	display: none;
 }
-/* hover control liens du header */
-.nav-item a:hover {
-	color: gold;
-	font-size: 1.35rem;
+/* afficher le menu burger et retirer les border onclick du bouton de menu burger */
+.navbar-toggler {
+	color: transparent;
 }
-/* param header i et hover control liens socials */
+
+/* taille, transition et couleur des icones du header */
 header i {
-	transition: 1s;
+	transition: 0.6s;
+	color: white;
 }
 header i:hover {
 	color: gold;
 	transform: rotateY(360deg);
 }
 
-.icon_header_site {
+/* taille et couleur de l'icon burger + hover control */
+.navbar-toggler i {
+	font-size: 2rem;
+}
+.navbar-toggler i:hover {
+	color: gold;
+	transform: none; /* retirer la rotation pour l'icone du menu burger*/
+}
+
+/* menu burger navigation: collapse */
+.nav_collapse_container {
+	background-color: #6552ff;
+	border-radius: 10px;
+	margin: 0.35rem 0.75rem 0.35rem;
+	padding: 0.25rem 0.75rem;
+}
+
+/* liste texte des liens du menu */
+.nav_collapse_list,
+.nav_collapse_list li {
 	display: flex;
-	justify-content: space-around;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	font-size: 1.2rem;
+	padding: 0;
+	margin: 0.25rem auto 1rem;
+}
+/* lien pour A propos */
+.dropdown button {
+	color: inherit;
+	font-size: inherit;
+	font-weight: 500;
+	margin: inherit;
+	border: none;
+	padding: 0;
+	margin: 0;
+	cursor: none;
+}
+/* sous-menus, container de : mon parcours */
+ul.dropdown-menu {
+	min-width: fit-content;
+	padding: 0;
+	border-radius: 10px;
+	border-color: gold;
+     margin: 0 ;
+}
+/* sous-menu: texte mon parcours et hover control */
+ul.dropdown-menu a {
+    font-size: 1rem;
+    font-weight: 500;
+}
+ul.dropdown-menu a:hover {
+	background-color: gold;
+	border-radius: 10px;
+}
+
+/* icones des reseaux sociaux dans le header */
+.header_icon_socials {
+	max-width: 40%;
+}
+
+.header_icon_socials,
+.header_icon_socials li,
+.header_icon_socials i {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
 	align-content: center;
+	flex-wrap: wrap;
+	font-size: 1.75rem; /* taille des icones sociaux */
+	margin: 0.35rem auto; /* margin entre les icones sociaux */
+	padding: 0;
 }
-.icon_header_site li {
-	margin: 0.5rem;
+
+/* hover control liens du header */
+header a:hover,
+.dropdown button:hover,
+.button.btn.btn_download:hover {
+	color: gold;
 }
-/* .nav_header_site .menu_header_site .item_menu_header_site a {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    color: white;
-} */
 
-/* .nav_header_site .menu_header_site .item_menu_header_site a:hover {
-    font-weight: bold;
-} */
+/* bouton de telechargement de CV du header */
+header .btn_download {
+	border-color: white;
+	color: white;
+	border-radius: 50px;
+	font-weight: 500;
+}
 
-/* responsive grand format */
+header .btn_download:hover {
+	background-color: gold;
+}
 
-@media screen and (min-width: 1024px) {
-    
-    header {
-        width: 20%;
-        max-height: 100vh;
-        position: fixed;
-	}
-    
-    .header_container {
-        display: flex;
-        flex-direction: column;
-        
-    }
-    /* logo */
-    header figure {
-        width: 60%;
-    }
-    
-	.menu_header_site {
-		flex-direction: column;
+/* responsive moyen format L */
+@media screen and (min-width: 375px) and (max-width: 768px) /* responsive format tablette */ {
+	/* liste texte des liens du menu */
+	.nav_collapse_list,
+	.nav_collapse_list li {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
 		justify-content: space-between;
-		height: 40vh;
-		font-size: 34px;
+		font-size: 1.2rem;
+		padding: 0 0.5rem;
+		margin: 0.25rem auto 1rem;
 	}
 
-	.hero {
+	/* bouton de telechargement de CV du header */
+	header .btn_download {
+		font-size: 1.2rem;
+	}
+	/* logo */
+	header figure {
+		max-width: 12%;
+	}
+}
+/* responsive tablette format */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+	/* logo */
+	header figure {
+		max-width: 12%;
+	}
+
+	/* taille et couleur de l'icon burger + hover control */
+	.navbar-toggler i {
+		font-size: 2.5rem;
+	}
+}
+
+/* responsive ordinateur laptop format */
+@media screen and (min-width: 1024px) {
+	/* afficher la nav du grand format */
+	.header_nav {
+		display: block;
+	}
+	ul.header_icon_socials:first-of-type {
+		display: inherit;
+	}
+	/* masquer la nav du petit format */
+	.nav_header_burger {
+		display: none;
+	}
+
+	/* contenu du header */
+	.header_container {
+		display: flex;
+		flex-direction: column;
+	}
+
+	/* logo */
+	header figure {
+		width: 50%;
+		margin-bottom: 10%;
+	}
+
+	/* navigation column nav_header */
+	.header_nav_list {
+		display: flex;
+		flex-direction: column;
+		height: 40vh;
+		font-size: 1.3rem;
+		justify-content: space-around;
+	}
+
+	/* ul.dropdown-menu {
+		min-width: inherit;
+		padding: inherit;
+		font-size: 1.2rem;
+	} */
+
+/* sous-menu: texte mon parcours et hover control */
+ul.dropdown-menu a {
+	font-size: 1.2rem;
+}
+
+ul.dropdown-menu a:hover {
+	background-color: gold;
+	border-radius: 10px;
+}
+
+	/* icones des reseaux sociaux dans le header */
+	.header_icon_socials {
+		flex-wrap: nowrap;
+		max-width: 100%;
+		margin-top: 2rem;
+	}
+	.header_icon_socials li {
+		margin: 0 0.75rem; /* margin entre les icones sociaux */
+	}
+
+	/* le corps du site : textuel */
+	.hero,
+	main {
 		width: 80%;
 		margin-left: 20%;
-	}
-	.icon_header_site,
-	.fab {
-		font-size: 1.8rem;
-		margin: 20% 0%;
 	}
 }
